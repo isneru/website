@@ -1,8 +1,16 @@
 <script lang="ts" setup>
-import { age, getSeoMeta, projects } from '@@/utils'
+import { age, getSeoMeta, fetchUserRepos } from '@@/utils'
 import { motion } from 'motion-v'
 
 useSeoMeta(getSeoMeta())
+
+const {
+	data: repos,
+	pending,
+	error
+} = await useAsyncData('repos', () => {
+	return fetchUserRepos('isneru', 'portfolio-show')
+})
 </script>
 
 <template>
@@ -20,9 +28,9 @@ useSeoMeta(getSeoMeta())
 		:initial="{ opacity: 0, y: 20 }"
 		:animate="{ opacity: 1, y: 0, transition: { delay: 0.5 } }"
 		class="mb-1 font-semibold uppercase"
-		>Projects</motion.p
+		><span v-if="pending">{{ 'Loading ' }}</span> Projects</motion.p
 	>
 	<div class="space-y-4">
-		<Project v-for="project in projects" :key="project.id" :project="project" />
+		<Project v-for="project in repos" :key="project.id" :project="project" />
 	</div>
 </template>

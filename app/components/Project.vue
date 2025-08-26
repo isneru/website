@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
-import { type Project } from '@@/utils'
+import { type Repository } from '@@/utils'
 
 type Props = {
-	project: Project
+	project: Repository
 }
 
 const { project } = defineProps<Props>()
@@ -11,7 +11,7 @@ const { project } = defineProps<Props>()
 
 <template>
 	<motion.a
-		:href="project.links.repo"
+		:href="project.url"
 		target="_blank"
 		rel="noreferrer"
 		:initial="{ opacity: 0, y: 20 }"
@@ -30,9 +30,9 @@ const { project } = defineProps<Props>()
 			</p>
 		</div>
 		<img
-			class="border-burnt-sienna-1/20 shadow-burnt-sienna-1/10 ml-auto aspect-video h-full max-h-40 w-full rounded-lg border object-cover shadow-md md:max-w-2/5"
+			class="border-burnt-sienna-1/20 shadow-burnt-sienna-1/10 ml-auto aspect-[1280/640] h-full max-h-40 w-full rounded-lg border object-cover shadow-md md:max-w-2/5"
 			draggable="false"
-			:src="project.img.path"
-			:alt="project.img.alt" />
+			:src="project.image"
+			:alt="project.name" />
 	</motion.a>
 </template>

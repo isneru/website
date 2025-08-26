@@ -3,13 +3,15 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	vite: {
-		plugins: [tailwindcss()]
+		plugins: [tailwindcss()],
+		server: {
+			allowedHosts: ['aggregate-weak-biographies-hc.trycloudflare.com']
+		}
 	},
 	site: {
 		name: 'Diogo Nogueira',
 		url: 'https://diogo.wtf'
 	},
-	runtimeConfig: {},
 	sourcemap: { client: true, server: false },
 	css: ['~/styles/globals.css'],
 	compatibilityDate: '2025-07-15',
