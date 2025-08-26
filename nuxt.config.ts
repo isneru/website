@@ -3,10 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	vite: {
-		plugins: [tailwindcss()],
-		server: {
-			allowedHosts: ['aggregate-weak-biographies-hc.trycloudflare.com']
-		}
+		plugins: [tailwindcss()]
 	},
 	site: {
 		name: 'Diogo Nogueira',
