@@ -37,7 +37,7 @@ type GitHubSearchResponse = {
 
 export const user_repos_query = (user: string, topic?: string) => `
   query {
-    search(query: "user:${user} ${topic ? `topic:${topic}` : ''}", type: REPOSITORY, first: 20) {
+    search(query: "user:${user} ${topic ? `topic:${topic}` : ''} sort:updated-desc", type: REPOSITORY, first: 20) {
       edges {
         node {
           ... on Repository {
