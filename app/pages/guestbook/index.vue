@@ -44,11 +44,32 @@ const {
 		v-if="status !== 'success' && !error"
 		>loading...</motion.p
 	>
-	<p v-else-if="error" class="text-burnt-sienna-1">
+	<motion.p
+		:initial="{ opacity: 0, y: -20 }"
+		:animate="{
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.5
+			}
+		}"
+		v-else-if="error"
+		class="text-burnt-sienna-1">
 		{{ 'something went wrong. try again later :(' }}
-	</p>
+	</motion.p>
 	<div v-else class="w-full space-y-4">
-		<p v-if="!entries?.length">no entries yet, be the first to say hi!</p>
+		<motion.p
+			:initial="{ opacity: 0, y: -20 }"
+			:animate="{
+				opacity: 1,
+				y: 0,
+				transition: {
+					delay: 0.5
+				}
+			}"
+			v-if="!entries?.length"
+			>no entries yet, be the first to say hi!</motion.p
+		>
 		<motion.div
 			v-else
 			v-for="(entry, idx) in entries"

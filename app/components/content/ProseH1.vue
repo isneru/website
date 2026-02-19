@@ -42,7 +42,7 @@ const generate = computed(
 			:id="props.id"
 			:initial="{ opacity: 0, y: -40 }"
 			:animate="{ opacity: 1, y: 0, transition: { delay: 0.3 } }"
-			class="relative mb-4 inline-block text-4xl font-bold tracking-tight md:text-6xl">
+			class="relative mb-4 inline-block text-4xl font-bold tracking-tight text-pretty md:text-6xl">
 			<a v-if="generate" :href="`#${props.id}`">
 				<slot />
 			</a>

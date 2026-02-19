@@ -40,7 +40,7 @@ const { title, showBackLink = false } = defineProps<Props>()
 			</span>
 			<span
 				v-if="$slots.popover"
-				class="bg-gunmetal/95 text-antiflash-white pointer-events-none absolute top-2 left-full transform rounded-xl px-2 py-1 text-sm font-normal tracking-normal whitespace-nowrap italic opacity-0 backdrop-blur-sm transition-all group-hover/popover:translate-x-2 group-hover/popover:opacity-100 md:top-6">
+				class="bg-gunmetal/95 text-antiflash-white pointer-events-none absolute top-2 left-full transform rounded-full px-2 py-1 text-sm font-normal tracking-normal whitespace-nowrap italic opacity-0 backdrop-blur-sm transition-all select-none group-hover/popover:translate-x-2 group-hover/popover:opacity-100 md:top-6">
 				<slot name="popover" />
 			</span>
 		</motion.h1>

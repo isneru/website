@@ -13,6 +13,7 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 		<ContentRenderer v-if="post" :value="post" />
 
 		<motion.p
+			v-if="!!post && post?.body?.value?.length < 10"
 			:initial="{ opacity: 0, y: 20 }"
 			:animate="{ opacity: 1, y: 0, transition: { delay: 0.5 } }">
 			if you feel like this page is too empty, it's because it's still a work in

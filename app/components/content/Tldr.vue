@@ -14,7 +14,7 @@ const props = defineProps<Props>()
 		:id="props.id"
 		:initial="{ opacity: 0, x: -40 }"
 		:animate="{ opacity: 1, x: 0, transition: { delay: 0.4 } }">
-		<strong>TL; DR</strong>
+		<strong class="text-burnt-sienna-1">TL; DR</strong>
 		<slot />
 	</motion.div>
 </template>

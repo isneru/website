@@ -17,7 +17,10 @@ useSeoMeta(getSeoMeta())
 		</template>
 	</Header>
 	<div v-if="posts?.length">
-		<BlogLink v-for="post in posts" :key="post.id" :blog="post" />
+		<BlogLink
+			v-for="(post, idx) in posts"
+			:key="post.id"
+			:blog="{ ...post, id: idx }" />
 	</div>
 	<div v-else><p>no posts yet, check back later</p></div>
 </template>

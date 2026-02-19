@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
 import { ref } from 'vue'
 import { getSeoMeta } from '@@/utils'
 
@@ -48,27 +49,42 @@ definePageMeta({
 	<div class="flex h-[80vh] w-full flex-col items-center gap-10 xl:flex-row">
 		<div
 			class="flex w-full flex-col items-center justify-center gap-4 xl:items-start">
-			<p class="relative text-3xl font-bold">
+			<motion.p
+				:initial="{ opacity: 0, y: -40 }"
+				:animate="{ opacity: 1, y: 0, transition: { delay: 0.2 } }"
+				class="relative text-3xl font-bold">
 				<span
 					class="text-burnt-sienna-1 absolute top-1 -left-5 rounded-full text-xl">
 					#
 				</span>
 				What is this?
-			</p>
-			<p class="max-w-4/5 text-base leading-relaxed md:text-lg">
-				Welcome to my digital guestbook! This is a cozy little corner of the
+			</motion.p>
+			<motion.p
+				:initial="{ opacity: 0, x: -40 }"
+				:animate="{ opacity: 1, x: 0, transition: { delay: 0.3 } }"
+				class="max-w-4/5 text-base leading-relaxed md:text-lg">
+				{{
+					`Welcome to my digital guestbook! This is a cozy little corner of the
 				internet where you can drop a message, share your thoughts, or simply
 				say hello. Whether you're here to leave some kind words, give feedback,
 				or just want to let me know you stopped by—this is the place. I really
 				appreciate you taking the time to write something. It means a lot. So go
-				ahead, don’t be shy—type anything you like and hit submit! 😊
-			</p>
+				ahead, don't be shy—type anything you like and hit submit! 🧡`
+				}}
+			</motion.p>
+			<motion.div
+				:initial="{ opacity: 0, y: 40 }"
+				:animate="{ opacity: 1, y: 0, transition: { delay: 0.4 } }">
+				<NuxtTurnstile :options="{ language: 'en' }" v-model="token" />
+			</motion.div>
 		</div>
 		<div
 			id="divider"
 			class="bg-burnt-sienna-1/20 mx-auto flex h-px w-4/5 xl:h-4/5 xl:w-px" />
 		<div class="flex w-full items-center justify-center">
-			<form
+			<motion.form
+				:initial="{ opacity: 0, x: 40 }"
+				:animate="{ opacity: 1, x: 0, transition: { delay: 0.2 } }"
 				@submit.prevent="submit"
 				class="bg-burnt-sienna-3/40 border-burnt-sienna-1/20 shadow-burnt-sienna-1/10 flex w-full max-w-lg flex-col items-center justify-center gap-6 rounded-lg border p-4 shadow-md backdrop-blur-sm">
 				<div class="flex w-full flex-col">
@@ -106,7 +122,7 @@ definePageMeta({
 						placeholder="say something nice :)"
 						class="bg-antiflash-white border-burnt-sienna-2 placeholder:text-gunmetal focus:ring-burnt-sienna-1/20 ml-auto flex w-[calc(100%-1.5rem)] resize-none rounded-md border-1 px-3 py-2 transition focus:ring-2 focus:outline-none"></textarea>
 				</div>
-				<NuxtTurnstile :options="{ language: 'en' }" v-model="token" />
+
 				<div class="relative w-full">
 					<button
 						type="submit"
@@ -119,7 +135,7 @@ definePageMeta({
 						{{ error }}
 					</span>
 				</div>
-			</form>
+			</motion.form>
 		</div>
 	</div>
 </template>

@@ -5,6 +5,10 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+function cleanURL(url: string) {
+	return url.replace(/^(https?:\/\/|www\.|\/)/i, '').replace(/\/+$/, '')
+}
 </script>
 
 <template>
@@ -14,7 +18,7 @@ const props = defineProps<Props>()
 		class="hover:text-burnt-sienna-1 font-bold transition-colors hover:underline">
 		<slot />
 		<span class="text-sm font-normal">{{
-			` (${props.href?.toLowerCase()})`
+			` (${cleanURL(props.href?.toLowerCase() ?? '#')})`
 		}}</span>
 	</a>
 </template>
