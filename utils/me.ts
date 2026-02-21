@@ -52,16 +52,18 @@ const info = [
 const career = {
 	en: [
 		{
-			title: 'Last Position',
-			description: 'Employee at CeX - Computer Entertainment Exchange (PT)',
+			organization: 'CeX - Computer Entertainment Exchange',
+			location: 'Águas Santas, Portugal',
+			field: 'Electronics Retail',
 			start: '06/2023',
 			end: '06/2025'
 		}
 	],
 	pt: [
 		{
-			title: 'Último Cargo',
-			description: 'Funcionário na CeX - Computer Entertainment Exchange (PT)',
+			organization: 'CeX - Computer Entertainment Exchange',
+			location: 'Águas Santas, Portugal',
+			field: 'Retalho Eletrónico',
 			start: '06/2023',
 			end: '06/2025'
 		}
@@ -71,41 +73,46 @@ const career = {
 const education = {
 	en: [
 		{
-			title: 'College - Instituto Superior de Engenharia do Porto',
-			description: 'Telecommunications Engineering and IT',
+			organization: 'Instituto Superior de Engenharia do Porto',
+			location: 'Porto, Portugal',
+			field: 'Telecommunications Engineering and IT',
 			start: '09/2024',
 			end: 'Present'
 		},
 		{
-			title: 'College - Escola Superior de Tecnologia e Gestão',
-			description: 'Computer Security and Computer Networks',
+			organization: 'Escola Superior de Tecnologia e Gestão',
+			location: 'Porto, Portugal',
+			field: 'Computer Security and Computer Networks',
 			start: '10/2022',
 			end: '06/2024'
 		},
 		{
-			title: 'High School - Instituto Profissional de Tecnologias Avançadas',
-			description: 'Hardware and Software Management',
+			organization: 'Instituto Profissional de Tecnologias Avançadas',
+			location: 'Porto, Portugal',
+			field: 'Hardware and Software Management',
 			start: '09/2018',
 			end: '07/2021'
 		}
 	],
 	pt: [
 		{
-			title: 'Faculdade - Instituto Superior de Engenharia do Porto',
-			description: 'Engenharia de Telecomunicações e Informática',
+			organization: 'Instituto Superior de Engenharia do Porto',
+			location: 'Porto, Portugal',
+			field: 'Engenharia de Telecomunicações e Informática',
 			start: '09/2024',
 			end: 'Presente'
 		},
 		{
-			title: 'Faculdade - Escola Superior de Tecnologia e Gestão',
-			description: 'Segurança Informática e Redes de Computadores',
+			organization: 'Escola Superior de Tecnologia e Gestão',
+			location: 'Porto, Portugal',
+			field: 'Segurança Informática e Redes de Computadores',
 			start: '10/2022',
 			end: '06/2024'
 		},
 		{
-			title:
-				'Ensino Secundário - Instituto Profissional de Tecnologias Avançadas',
-			description: 'Gestão de Equipamentos Informáticos',
+			organization: 'Instituto Profissional de Tecnologias Avançadas',
+			location: 'Porto, Portugal',
+			field: 'Gestão de Equipamentos Informáticos',
 			start: '09/2018',
 			end: '07/2021'
 		}
@@ -115,7 +122,9 @@ const education = {
 const internships = {
 	en: [
 		{
-			title: 'Computer Repair and Service, Rethymno, Greece',
+			organization: 'Computer Repair and Service',
+			location: 'Rethymno, Greece',
+			field: 'IT Support and Hardware Maintenance',
 			start: '01/2022',
 			end: '05/2022',
 			tasks: [
@@ -129,7 +138,9 @@ const internships = {
 			]
 		},
 		{
-			title: 'ITSector, Porto, Portugal',
+			organization: 'ITSector',
+			location: 'Porto, Portugal',
+			field: 'IT Infrastructure and Support',
 			start: '04/2021',
 			end: '07/2021',
 			tasks: [
@@ -142,7 +153,9 @@ const internships = {
 	],
 	pt: [
 		{
-			title: 'Reparação e assistência de computadores, Rethymno, Grécia',
+			organization: 'Reparação e assistência de computadores',
+			location: 'Rethymno, Grécia',
+			field: 'Suporte de TI e Manutenção de Hardware',
 			start: '01/2022',
 			end: '05/2022',
 			tasks: [
@@ -156,7 +169,9 @@ const internships = {
 			]
 		},
 		{
-			title: 'ITSector, Porto, Portugal',
+			organization: 'ITSector',
+			location: 'Porto, Portugal',
+			field: 'Infraestrutura de TI e Suporte',
 			start: '04/2021',
 			end: '07/2021',
 			tasks: [
@@ -181,7 +196,7 @@ const skills = {
 		'Astro',
 		'TailwindCSS'
 	],
-	backend: ['Node.js', 'Express.js', 'C', 'PHP', 'Java'],
+	backend: ['Node.js', 'Express.js', 'C', 'C++', 'PHP', 'Java'],
 	databases: ['MongoDB', 'SQL', 'Prisma'],
 	tools: ['Git', 'GitHub', 'VSCode', 'Figma']
 }
