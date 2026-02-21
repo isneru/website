@@ -32,7 +32,7 @@ const me = info('pt')
 					{{ me.sections[0] }}
 				</h2>
 				<div v-for="(job, id) in me.career" :key="id" class="mb-6">
-					<h3 class="text-burnt-sienna-1 font-medium">
+					<h3 class="font-medium">
 						{{ job.organization }}
 					</h3>
 					<div class="opacity-80">{{ job.location }}</div>
@@ -47,7 +47,7 @@ const me = info('pt')
 					{{ me.sections[1] }}
 				</h2>
 				<div v-for="(step, id) in me.education" :key="id" class="mb-6">
-					<h3 class="text-burnt-sienna-1 font-medium">
+					<h3 class="font-medium">
 						{{ step.organization }}
 					</h3>
 					<div class="opacity-80">{{ step.location }}</div>
@@ -62,7 +62,7 @@ const me = info('pt')
 					{{ me.sections[2] }}
 				</h2>
 				<div v-for="(internship, id) in me.internships" :key="id" class="mb-6">
-					<h3 class="text-burnt-sienna-1 font-medium">
+					<h3 class="font-medium">
 						{{ internship.organization }}
 					</h3>
 					<div class="opacity-80">{{ internship.location }}</div>
