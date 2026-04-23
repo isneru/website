@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 	},
 	site: {
 		name: 'Diogo Nogueira',
-		url: 'https://diogo.wtf'
+		url: 'https://neru.sh'
 	},
 	sourcemap: { client: true, server: false },
 	css: ['~/styles/globals.css'],

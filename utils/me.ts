@@ -45,7 +45,7 @@ const info = [
 	{
 		text: 'website',
 		Icon: PhCursor,
-		href: 'https://diogo.wtf'
+		href: 'https://neru.sh'
 	}
 ]
 

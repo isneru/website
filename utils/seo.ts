@@ -23,10 +23,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'Developer and Telecommunications Engineering student.',
 		ogDescription: 'Developer and Telecommunications Engineering student.',
 		twitterDescription: 'Developer and Telecommunications Engineering student.',
-		ogUrl: 'https://diogo.wtf',
+		ogUrl: 'https://neru.sh',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/index.png',
-		twitterImage: 'https://diogo.wtf/og/index.png',
+		ogImage: 'https://neru.sh/og/index.png',
+		twitterImage: 'https://neru.sh/og/index.png',
 		ogLocale: 'en_US',
 		keywords:
 			'diogo, nogueira, dev, neru, home, portfolio, curriculum, developer'
@@ -39,10 +39,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'All the good bits.',
 		ogDescription: 'All the good bits.',
 		twitterDescription: 'All the good bits.',
-		ogUrl: 'https://diogo.wtf/curriculum/pt',
+		ogUrl: 'https://neru.sh/curriculum/pt',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/cv-pt.png',
-		twitterImage: 'https://diogo.wtf/og/cv-pt.png',
+		ogImage: 'https://neru.sh/og/cv-pt.png',
+		twitterImage: 'https://neru.sh/og/cv-pt.png',
 		ogLocale: 'pt_PT',
 		keywords: 'diogo, nogueira, dev, neru, portfolio, curriculo, desenvolvedor'
 	},
@@ -53,10 +53,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'All the good bits.',
 		ogDescription: 'All the good bits.',
 		twitterDescription: 'All the good bits.',
-		ogUrl: 'https://diogo.wtf/curriculum/en',
+		ogUrl: 'https://neru.sh/curriculum/en',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/cv-en.png',
-		twitterImage: 'https://diogo.wtf/og/cv-en.png',
+		ogImage: 'https://neru.sh/og/cv-en.png',
+		twitterImage: 'https://neru.sh/og/cv-en.png',
 		ogLocale: 'en_US',
 		keywords: 'diogo, nogueira, dev, neru, portfolio, curriculo, developer'
 	},
@@ -67,10 +67,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'All messages written are here.',
 		ogDescription: 'All messages written are here.',
 		twitterDescription: 'All messages written are here.',
-		ogUrl: 'https://diogo.wtf/guestbook',
+		ogUrl: 'https://neru.sh/guestbook',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/guestbook.png',
-		twitterImage: 'https://diogo.wtf/og/guestbook.png',
+		ogImage: 'https://neru.sh/og/guestbook.png',
+		twitterImage: 'https://neru.sh/og/guestbook.png',
 		ogLocale: 'en_US',
 		keywords:
 			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'
@@ -82,10 +82,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'Leave a message!',
 		ogDescription: 'Leave a message!',
 		twitterDescription: 'Leave a message!',
-		ogUrl: 'https://diogo.wtf/guestbook/sign',
+		ogUrl: 'https://neru.sh/guestbook/sign',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/guestbook-sign.png',
-		twitterImage: 'https://diogo.wtf/og/guestbook-sign.png',
+		ogImage: 'https://neru.sh/og/guestbook-sign.png',
+		twitterImage: 'https://neru.sh/og/guestbook-sign.png',
 		ogLocale: 'en_US',
 		keywords:
 			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'
@@ -97,10 +97,10 @@ const routesSEO: Record<string, SeoMeta> = {
 		description: 'Thoughts and musings.',
 		ogDescription: 'Thoughts and musings.',
 		twitterDescription: 'Thoughts and musings.',
-		ogUrl: 'https://diogo.wtf/blog',
+		ogUrl: 'https://neru.sh/blog',
 		ogType: 'website',
-		ogImage: 'https://diogo.wtf/og/blog.png',
-		twitterImage: 'https://diogo.wtf/og/blog.png',
+		ogImage: 'https://neru.sh/og/blog.png',
+		twitterImage: 'https://neru.sh/og/blog.png',
 		ogLocale: 'en_US',
 		keywords:
 			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'

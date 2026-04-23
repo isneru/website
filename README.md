@@ -4,7 +4,7 @@
 
 - After you are done installing the dependencies run `npm run dev`.
 
-## You can access this project's deploy by clicking [here](https://diogo.wtf).
+## You can access this project's deploy by clicking [here](https://neru.sh).
 
 #### Technologies
 
