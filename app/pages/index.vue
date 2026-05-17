@@ -1,36 +1,21 @@
 <script lang="ts" setup>
-import { age, getSeoMeta, fetchUserRepos } from '@@/utils'
-import { motion } from 'motion-v'
-
+import { age, getSeoMeta, fetchUserRepos, projects } from '@@/utils'
 useSeoMeta(getSeoMeta())
-
-const {
-	data: repos,
-	pending,
-	error
-} = await useAsyncData('repos', () => {
-	return fetchUserRepos('isneru', 'portfolio-show')
-})
 </script>
 
 <template>
-	<Header :title="'diogo nogueira'" class="text-burnt-sienna-1">
-		<template #popover> {{ age }} years old (he/him) </template>
-		<template #subtitle>
-			<p>
-				a <span class="text-burnt-sienna-2">frontend developer</span> who chose
-				to hard code his life.
-			</p>
-			<p>aka <span class="text-burnt-sienna-2">neru</span></p>
-		</template>
-	</Header>
-	<motion.p
-		:initial="{ opacity: 0, y: 20 }"
-		:animate="{ opacity: 1, y: 0, transition: { delay: 0.5 } }"
-		class="mb-1 font-semibold uppercase"
-		><span v-if="pending">{{ 'Loading ' }}</span> Projects</motion.p
-	>
-	<div class="space-y-4">
-		<Project v-for="project in repos" :key="project.id" :project="project" />
+	<p class="text-foreground text-2xl">Diogo Nogueira</p>
+	<p class="text-muted-foreground mt-2">
+		a frontend developer who chose to hard code his life
+	</p>
+
+	<div class="mt-16">
+		<h2 class="text-foreground mb-10 text-base">projects</h2>
+		<ul class="space-y-6">
+			<Project
+				v-for="project in projects"
+				:key="project.id"
+				:project="project" />
+		</ul>
 	</div>
 </template>

@@ -15,11 +15,13 @@ type SeoMeta = {
 	keywords: string
 }
 
+const mkTitle = (path?: string) => (!!path ? `neru: ${path}` : 'neru')
+
 const routesSEO: Record<string, SeoMeta> = {
 	'/': {
-		title: 'Diogo Nogueira',
-		ogTitle: 'Diogo Nogueira',
-		twitterTitle: 'Diogo Nogueira',
+		title: mkTitle(),
+		ogTitle: mkTitle(),
+		twitterTitle: mkTitle(),
 		description: 'Developer and Telecommunications Engineering student.',
 		ogDescription: 'Developer and Telecommunications Engineering student.',
 		twitterDescription: 'Developer and Telecommunications Engineering student.',
@@ -31,29 +33,43 @@ const routesSEO: Record<string, SeoMeta> = {
 		keywords:
 			'diogo, nogueira, dev, neru, home, portfolio, curriculum, developer'
 	},
-
-	'/curriculum/pt': {
-		title: `Curriculum de Diogo Nogueira`,
-		ogTitle: `Curriculum de Diogo Nogueira`,
-		twitterTitle: `Curriculum de Diogo Nogueira`,
+	'/stack': {
+		title: mkTitle('stack'),
+		ogTitle: mkTitle('stack'),
+		twitterTitle: mkTitle('stack'),
+		description: 'Knowledge corner.',
+		ogDescription: 'Knowledge corner.',
+		twitterDescription: 'Knowledge corner.',
+		ogUrl: 'https://neru.sh/stack',
+		ogType: 'website',
+		ogImage: 'https://neru.sh/og/index.png',
+		twitterImage: 'https://neru.sh/og/index.png',
+		ogLocale: 'en_US',
+		keywords:
+			'diogo, nogueira, dev, neru, home, portfolio, curriculum, developer'
+	},
+	'/cv/pt': {
+		title: mkTitle('cv (pt)'),
+		ogTitle: mkTitle('cv (pt)'),
+		twitterTitle: mkTitle('cv (pt)'),
 		description: 'All the good bits.',
 		ogDescription: 'All the good bits.',
 		twitterDescription: 'All the good bits.',
-		ogUrl: 'https://neru.sh/curriculum/pt',
+		ogUrl: 'https://neru.sh/cv/pt',
 		ogType: 'website',
 		ogImage: 'https://neru.sh/og/cv-pt.png',
 		twitterImage: 'https://neru.sh/og/cv-pt.png',
 		ogLocale: 'pt_PT',
 		keywords: 'diogo, nogueira, dev, neru, portfolio, curriculo, desenvolvedor'
 	},
-	'/curriculum/en': {
-		title: `Diogo Nogueira's Curriculum`,
-		ogTitle: `Diogo Nogueira's Curriculum`,
-		twitterTitle: `Diogo Nogueira's Curriculum`,
+	'/cv/en': {
+		title: mkTitle('cv (en)'),
+		ogTitle: mkTitle('cv (en)'),
+		twitterTitle: mkTitle('cv (en)'),
 		description: 'All the good bits.',
 		ogDescription: 'All the good bits.',
 		twitterDescription: 'All the good bits.',
-		ogUrl: 'https://neru.sh/curriculum/en',
+		ogUrl: 'https://neru.sh/cv/en',
 		ogType: 'website',
 		ogImage: 'https://neru.sh/og/cv-en.png',
 		twitterImage: 'https://neru.sh/og/cv-en.png',
@@ -61,9 +77,9 @@ const routesSEO: Record<string, SeoMeta> = {
 		keywords: 'diogo, nogueira, dev, neru, portfolio, curriculo, developer'
 	},
 	'/guestbook': {
-		title: `Diogo Nogueira's Guestbook`,
-		ogTitle: `Diogo Nogueira's Guestbook`,
-		twitterTitle: `Diogo Nogueira's Guestbook`,
+		title: mkTitle('guestbook'),
+		ogTitle: mkTitle('guestbook'),
+		twitterTitle: mkTitle('guestbook'),
 		description: 'All messages written are here.',
 		ogDescription: 'All messages written are here.',
 		twitterDescription: 'All messages written are here.',
@@ -71,36 +87,6 @@ const routesSEO: Record<string, SeoMeta> = {
 		ogType: 'website',
 		ogImage: 'https://neru.sh/og/guestbook.png',
 		twitterImage: 'https://neru.sh/og/guestbook.png',
-		ogLocale: 'en_US',
-		keywords:
-			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'
-	},
-	'/guestbook/sign': {
-		title: `Sign Diogo Nogueira's Guestbook`,
-		ogTitle: `Sign Diogo Nogueira's Guestbook`,
-		twitterTitle: `Sign Diogo Nogueira's Guestbook`,
-		description: 'Leave a message!',
-		ogDescription: 'Leave a message!',
-		twitterDescription: 'Leave a message!',
-		ogUrl: 'https://neru.sh/guestbook/sign',
-		ogType: 'website',
-		ogImage: 'https://neru.sh/og/guestbook-sign.png',
-		twitterImage: 'https://neru.sh/og/guestbook-sign.png',
-		ogLocale: 'en_US',
-		keywords:
-			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'
-	},
-	'/blog': {
-		title: `Diogo Nogueira's Blog`,
-		ogTitle: `Diogo Nogueira's Blog`,
-		twitterTitle: `Diogo Nogueira's Blog`,
-		description: 'Thoughts and musings.',
-		ogDescription: 'Thoughts and musings.',
-		twitterDescription: 'Thoughts and musings.',
-		ogUrl: 'https://neru.sh/blog',
-		ogType: 'website',
-		ogImage: 'https://neru.sh/og/blog.png',
-		twitterImage: 'https://neru.sh/og/blog.png',
 		ogLocale: 'en_US',
 		keywords:
 			'diogo, nogueira, dev, neru, portfolio, curriculo, developer, guestbook'

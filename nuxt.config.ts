@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		plugins: [tailwindcss()]
 	},
 	site: {
-		name: 'Diogo Nogueira',
+		name: 'neru',
 		url: 'https://neru.sh'
 	},
 	sourcemap: { client: true, server: false },
@@ -18,16 +18,16 @@ export default defineNuxtConfig({
 		'@nuxt/icon',
 		'@nuxtjs/turnstile',
 		'@nuxt/scripts',
-		'nitro-cloudflare-dev',
-		'motion-v/nuxt',
-		'@nuxt/content'
+		'nitro-cloudflare-dev'
 	],
+	routeRules: {
+		'/cv': { redirect: '/cv/en' }
+	},
 	experimental: {
 		viewTransition: true
 	},
 	app: {
 		head: {
-			script: [{ src: '/oneko/oneko.js', tagPosition: 'bodyOpen' }],
 			htmlAttrs: {
 				lang: 'en'
 			},
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 				{ name: 'theme-color', content: '#000000' },
 				{ name: 'color-scheme', content: 'dark' },
-				{ name: 'author', content: 'Diogo' },
+				{ name: 'author', content: 'neru' },
 				{ name: 'twitter:card', content: 'summary_large_image' }
 			],
 			link: [
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 		preset: 'cloudflare_module',
 		prerender: {
 			crawlLinks: true,
-			routes: ['/', '/curriculum/en', '/curriculum/pt']
+			routes: ['/', '/cv/en', '/cv/pt']
 		},
 		experimental: { database: true, tasks: true },
 		cloudflare: {

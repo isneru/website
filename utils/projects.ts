@@ -1,88 +1,40 @@
-export type TopicNode = {
-	topic: { name: string }
-}
-
-export type RepositoryNode = {
-	name: string
-	url: string
-	description: string | null
-	primaryLanguage: { name: string } | null
-	openGraphImageUrl: string
-	repositoryTopics: {
-		nodes: TopicNode[]
-	}
-}
-
-export type Repository = {
+export type Project = {
 	id: number
 	name: string
+	desc: string | null
+	langs: string[]
 	url: string
-	description: string | null
-	language: string | null
-	image: string
-	topics: string[]
 }
 
-type SearchEdge = {
-	node: RepositoryNode
-}
+let i = 1
 
-type GitHubSearchResponse = {
-	data: {
-		search: {
-			edges: SearchEdge[]
-		}
-	}
-}
-
-export const user_repos_query = (user: string, topic?: string) => `
-  query {
-    search(query: "user:${user} ${topic ? `topic:${topic}` : ''} sort:updated-desc", type: REPOSITORY, first: 20) {
-      edges {
-        node {
-          ... on Repository {
-            name
-            url
-            description
-            primaryLanguage { name }
-            openGraphImageUrl
-            repositoryTopics(first: 10) {
-              nodes {
-                topic { name }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export const fetchUserRepos = async (
-	user: string,
-	topic?: string
-): Promise<Repository[]> => {
-	const res = await $fetch<GitHubSearchResponse>(
-		'https://api.github.com/graphql',
-		{
-			method: 'POST',
-			headers: {
-				Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
-			},
-			body: { query: user_repos_query(user, topic) }
-		}
-	)
-
-	let i = 1
-	return res.data.search.edges.map(({ node }) => ({
+export const projects: Project[] = [
+	{
 		id: i++,
-		name: node.name
-			.replace(/[-_]/g, ' ')
-			.replace(/\b\w/g, c => c.toUpperCase()),
-		url: node.url,
-		language: node.primaryLanguage?.name ?? null,
-		description: node.description,
-		image: node.openGraphImageUrl,
-		topics: node.repositoryTopics.nodes.map(t => t.topic.name)
-	}))
-}
+		name: 'BDAMD TP2 25/26',
+		desc: 'Data Warehouses project for college. Final grade: 19.1/20',
+		langs: ['sql'],
+		url: 'https://github.com/isneru/BDAMD_TP2_25_26'
+	},
+	{
+		id: i++,
+		name: 'C HTML Templater',
+		desc: 'A simple HTTP web server written in C with basic HTML templating support.',
+		langs: ['c'],
+		url: 'https://github.com/isneru/c-html-templater'
+	},
+	{
+		id: i++,
+		name: 'newtab',
+		desc: "Simple HTML page for 'New Tab Override' extension on browsers",
+		langs: ['nextjs', 'typescript'],
+		url: 'https://github.com/isneru/newtab'
+	},
+	{
+		id: i++,
+		name: 'test-agenda',
+		desc: 'A tests order management project. Made for internal use at Webuy. No longer in use.',
+		langs: ['nextjs', 'typescript'],
+		url: 'https://github.com/isneru/test-agenda'
+	}
+]

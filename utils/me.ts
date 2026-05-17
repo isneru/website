@@ -1,10 +1,10 @@
 import {
-	PhCompass,
-	PhCursor,
 	PhLinkedinLogo,
-	PhPhoneCall,
 	PhEnvelope,
-	PhGithubLogo
+	PhGithubLogo,
+	PhGlobe,
+	PhMapPin,
+	PhPhone
 } from '@phosphor-icons/vue'
 
 const name = 'Diogo Nogueira'
@@ -21,16 +21,16 @@ const about = {
 
 const info = [
 	{
-		text: 'diogoclanogueira@gmail.com',
+		text: 'isdiogon@gmail.com',
 		Icon: PhEnvelope
 	},
 	{
 		text: '(+351) 916 977 715',
-		Icon: PhPhoneCall
+		Icon: PhPhone
 	},
 	{
 		text: 'Porto, Portugal',
-		Icon: PhCompass
+		Icon: PhMapPin
 	},
 	{
 		text: 'linkedin/diogoclanogueira',
@@ -44,7 +44,7 @@ const info = [
 	},
 	{
 		text: 'website',
-		Icon: PhCursor,
+		Icon: PhGlobe,
 		href: 'https://neru.sh'
 	}
 ]
@@ -248,22 +248,22 @@ const hobbies = {
 
 const sections = {
 	en: [
-		'Career',
-		'Education',
-		'Internships',
-		'Skills',
-		'Languages',
-		'Certificates',
-		'Achievements'
+		'career',
+		'education',
+		'internships',
+		'skills',
+		'languages',
+		'certificates',
+		'achievements'
 	],
 	pt: [
-		'Carreira',
-		'Educação',
-		'Estágios',
-		'Skills',
-		'Línguas',
-		'Certificados',
-		'Conquistas'
+		'carreira',
+		'educação',
+		'estágios',
+		'competências',
+		'línguas',
+		'certificados',
+		'conquistas'
 	]
 }
 

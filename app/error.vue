@@ -11,6 +11,7 @@ const quotes404 = [
 	'this page is on vacation.',
 	'this page is taking a coffee break.'
 ]
+
 const quote404 = quotes404[Math.floor(Math.random() * quotes404.length)]
 
 const props = defineProps({
@@ -20,9 +21,8 @@ const props = defineProps({
 
 <template>
 	<NuxtLayout v-if="error"">
-		<Header size="large" :title="error.statusCode.toString()" class="mx-auto" />
-		<section class="text-gunmetal/70 mb-12 text-center text-base md:text-lg">
-			<p class="mb-4 italic">
+		<PageTitle :title="error.statusCode.toString()" />
+			<p class="text-muted-foreground">
 				{{
 					error.statusCode === 404
 						? quote404
@@ -31,10 +31,9 @@ const props = defineProps({
 			</p>
 			<NuxtLink
 				to="/"
-				class="border-antiflash-white/10 bg-gunmetal text-antiflash-white inline-block rounded border px-6 py-4 text-lg font-semibold"
+				class="mt-6 inline-block text-primary hover:opacity-80 transition-opacity"
 				variant="button">
-				← go back home
+				← home
 			</NuxtLink>
-		</section>
 	</NuxtLayout>
 </template>

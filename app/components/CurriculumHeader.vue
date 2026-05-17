@@ -1,18 +1,17 @@
 <script lang="ts" setup>
 import { me } from '@@/utils'
+
+const { info } = me('en')
 </script>
 
 <template>
-	<p aria-hidden class="h-[2px] bg-[url('/pattern.svg')]" />
-	<div
-		class="grid gap-3 rounded-lg p-4 text-center md:grid-cols-2 md:grid-rows-3">
+	<div class="text-muted-foreground grid gap-x-8 gap-y-2 md:grid-cols-2">
 		<DynamicSpan
-			v-for="({ Icon, text, href }, id) in me('en').info"
+			v-for="({ Icon, text, href }, id) in info"
 			:href="href"
 			:key="id">
-			<component :is="Icon" weight="fill" :stroke-width="1.5" />
-			<span>{{ text }}</span>
+			<component :is="Icon" :stroke-width="2" />
+			{{ text }}
 		</DynamicSpan>
 	</div>
-	<p aria-hidden class="h-[2px] bg-[url('/pattern.svg')]" />
 </template>

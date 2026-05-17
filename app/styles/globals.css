@@ -2,58 +2,61 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@theme {
-	--font-sans: 'Outfit', 'sans-serif';
-	--font-mono: 'Cascadia Mono', 'monospace';
-	--color-burnt-sienna-1: #d77a61;
-	--color-burnt-sienna-2: #d8b4a0;
-	--color-burnt-sienna-3: #dbd3d8;
-	--color-antiflash-white: #eff1f3;
-	--color-gunmetal: #223843;
-	--breakpoint-print: 'print';
-	--animate-ripple: ripple 2s ease-out infinite;
-	--animate-ripple-hover: ripple-hover 2s ease-out infinite;
+@custom-variant dark (&:is(.dark *));
 
-	@keyframes ripple {
-		0% {
-			box-shadow: 0 0 0 0 var(--color-gunmetal);
-		}
-		70% {
-			box-shadow: 0 0 0 7px rgba(255, 0, 0, 0);
-		}
-		100% {
-			box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-		}
-	}
-	@keyframes ripple-hover {
-		0% {
-			box-shadow: 0 0 0 0 var(--color-burnt-sienna-1);
-		}
-		70% {
-			box-shadow: 0 0 0 7px rgba(255, 0, 0, 0);
-		}
-		100% {
-			box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-		}
-	}
+@theme {
+	--breakpoint-print: 'print';
+	--radius-sm: 0px;
+	--radius-md: 0px;
+	--radius-lg: 0px;
+	--radius-xl: 0px;
+	--color-background: #111111;
+	--color-foreground: #d4d4d4;
+	--color-card: #111111;
+	--color-card-foreground: #d4d4d4;
+	--color-popover: #111111;
+	--color-popover-foreground: #d4d4d4;
+	--color-primary: #7aa2f7;
+	--color-primary-foreground: #111111;
+	--color-secondary: #1a1a1a;
+	--color-secondary-foreground: #d4d4d4;
+	--color-muted: #1a1a1a;
+	--color-muted-foreground: #666666;
+	--color-accent: #7aa2f7;
+	--color-accent-foreground: #111111;
+	--color-destructive: oklch(0.62 0.2 25);
+	--color-destructive-foreground: #ffffff;
+	--color-border: #1f1f1f;
+	--color-input: #1a1a1a;
+	--color-ring: #7aa2f7;
+	--color-comment: #666666;
+	--font-mono:
+		'Cascadia Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo,
+		Consolas, monospace;
+	--font-sans:
+		'Cascadia Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo,
+		Consolas, monospace;
 }
 
 @layer base {
 	html {
-		scrollbar-gutter: stable;
+		color-scheme: dark;
 	}
-
 	body {
-		@apply bg-antiflash-white text-gunmetal min-h-screen font-sans antialiased;
+		background-color: #111111;
+		color: #d4d4d4;
+		font-family:
+			'Cascadia Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo,
+			Consolas, monospace;
+		font-feature-settings:
+			'calt' 0,
+			'liga' 0;
+		-webkit-font-smoothing: antialiased;
 	}
-}
-
-@layer utilities {
 	::selection {
-		@apply bg-burnt-sienna-1 text-gunmetal;
+		background: rgba(122, 162, 247, 0.25);
 	}
-
-	.card {
-		@apply bg-burnt-sienna-3/40 border-burnt-sienna-1/20 shadow-burnt-sienna-1/10 hover:shadow-burnt-sienna-1/20 rounded-lg border shadow-md backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg;
+	a {
+		text-decoration: none;
 	}
 }

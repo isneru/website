@@ -12,7 +12,7 @@ const { href } = defineProps<Props>()
 		:href="href"
 		rel="noreferrer"
 		target="_blank"
-		class="decoration-burnt-sienna-1 flex items-center gap-2 hover:underline">
+		class="hover:text-primary flex items-center gap-2 transition-colors">
 		<slot />
 	</a>
 	<span v-else class="flex items-center gap-2"><slot /></span>

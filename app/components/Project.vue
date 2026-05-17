@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
 import { type Repository } from '@@/utils'
 
 type Props = {
@@ -10,29 +9,23 @@ const { project } = defineProps<Props>()
 </script>
 
 <template>
-	<motion.a
-		:href="project.url"
-		target="_blank"
-		rel="noreferrer"
-		:initial="{ opacity: 0, y: 20 }"
-		:animate="{
-			opacity: 1,
-			y: 0,
-			transition: { delay: 0.5 + project.id * 0.08 }
-		}"
-		class="card flex w-full flex-col gap-2 p-3 md:flex-row md:gap-6">
-		<div class="flex h-full flex-col">
-			<span class="my-2 px-2 text-2xl font-bold tracking-tight">
-				{{ project.name }}
-			</span>
-			<p class="text-gunmetal mb-6 px-2 font-normal">
-				{{ project.description }}
-			</p>
-		</div>
-		<img
-			class="border-burnt-sienna-1/20 shadow-burnt-sienna-1/10 ml-auto aspect-[1280/640] h-full max-h-40 w-full rounded-lg border object-cover shadow-md md:max-w-2/5"
-			draggable="false"
-			:src="project.image"
-			:alt="project.name" />
-	</motion.a>
+	<li class="group">
+		<a
+			:href="project.url"
+			class="text-foreground group-hover:text-primary my-5 transition-colors"
+			target="_blank"
+			rel="noreferrer">
+			{{ project.name }}
+		</a>
+		<p class="text-muted-foreground mt-1">{{ project.desc }}</p>
+		<p v-if="project.langs.length == 1" class="text-muted-foreground mt-1">
+			language:
+			{{ project.langs[0].toUpperCase() }}
+		</p>
+		<p v-else-if="project.langs.length > 1" class="text-muted-foreground mt-1">
+			languages:
+			{{ project.langs.join(', ').toUpperCase() }}
+		</p>
+		<p v-else class="text-muted-foreground mt-1">languages not specified</p>
+	</li>
 </template>

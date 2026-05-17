@@ -1,8 +1,6 @@
 <template>
-	<div class="bg-antiflash-white text-gunmetal max-h-screen min-h-screen">
-		<Navbar />
-		<main class="mx-auto flex min-h-screen max-w-2xl flex-col px-4 pt-24 pb-10">
-			<slot />
-		</main>
-	</div>
+	<Navbar />
+	<main class="mx-auto max-w-2xl px-6 pb-24 text-sm leading-relaxed">
+		<slot />
+	</main>
 </template>
