@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { age, getSeoMeta, fetchUserRepos } from '@@/utils'
+import { age, getSeoMeta } from '@@/utils'
 
 useSeoMeta(getSeoMeta())
 

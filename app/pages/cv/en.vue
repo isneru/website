@@ -88,11 +88,8 @@ const skillPad = Math.max(...skillRows.map(s => s.label.length))
 		<div>
 			<section>
 				<CurriculumHeading :h="me.sections[3]" />
-				<div class="font-mono text-muted-foreground space-y-1">
-					<div
-						v-for="row in skillRows"
-						:key="row.label"
-						class="flex gap-2">
+				<div class="text-muted-foreground space-y-1 font-mono">
+					<div v-for="row in skillRows" :key="row.label" class="flex gap-2">
 						<span class="text-foreground whitespace-pre">{{
 							row.label.padEnd(skillPad, ' ')
 						}}</span>
