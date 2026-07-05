@@ -21,7 +21,7 @@
 	--color-secondary: #1a1a1a;
 	--color-secondary-foreground: #d4d4d4;
 	--color-muted: #1a1a1a;
-	--color-muted-foreground: #666666;
+	--color-muted-foreground: #808080;
 	--color-accent: #7aa2f7;
 	--color-accent-foreground: #111111;
 	--color-destructive: oklch(0.62 0.2 25);
@@ -29,7 +29,7 @@
 	--color-border: #1f1f1f;
 	--color-input: #1a1a1a;
 	--color-ring: #7aa2f7;
-	--color-comment: #666666;
+	--color-comment: #808080;
 	--font-mono:
 		'Cascadia Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo,
 		Consolas, monospace;
